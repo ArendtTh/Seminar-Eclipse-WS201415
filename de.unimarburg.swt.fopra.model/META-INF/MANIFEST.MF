@@ -1,6 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: de.unimarburg.swt.fopra.model
-Bundle-SymbolicName: de.unimarburg.swt.fopra.model; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: de.unimarburg.swt.fopra.model;singleton:=true
 Bundle-Version: 0.1.0.qualifier
-Require-Bundle: org.eclipse.emf.ecore
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: fopramodel,
+ fopramodel.impl,
+ fopramodel.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
+Bundle-ActivationPolicy: lazy

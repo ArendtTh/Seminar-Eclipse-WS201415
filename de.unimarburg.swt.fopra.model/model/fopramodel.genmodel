@@ -1,11 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/de.unimarburg.swt.fopra.model/src" modelPluginID="de.unimarburg.swt.fopra.model"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.unimarburg.swt.fopra.model/src" modelPluginID="de.unimarburg.swt.fopra.model"
     modelName="Fopramodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>fopramodel.ecore</foreignModel>
   <genPackages prefix="Fopramodel" disposableProviderFactory="true" ecorePackage="fopramodel.ecore#/">
-    <genClasses ecoreClass="fopramodel.ecore#//FoPra"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fopramodel.ecore#//Status">
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Status/pending"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Status/inprocess"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Status/completed"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Status/cancelled"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fopramodel.ecore#//Course">
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Course/InfoBSc"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Course/InfoMSc"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Course/InfoDiplom"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Course/InfoMinorSubject"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//Course/InfoPostGraduate"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fopramodel.ecore#//AuxiliaryKind">
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//AuxiliaryKind/ProgrammingLanguage"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//AuxiliaryKind/Tool"/>
+      <genEnumLiterals ecoreEnumLiteral="fopramodel.ecore#//AuxiliaryKind/Method"/>
+    </genEnums>
+    <genClasses ecoreClass="fopramodel.ecore#//FoPra">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//FoPra/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//FoPra/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//FoPra/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//FoPra/maxNumberOfStudents"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//FoPra/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//FoPra/end"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//FoPra/students"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//FoPra/rg"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//FoPra/supervisor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//FoPra/advisor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//FoPra/auxiliaries"/>
+    </genClasses>
+    <genClasses ecoreClass="fopramodel.ecore#//FoPraManagementSystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fopramodel.ecore#//FoPraManagementSystem/fopras"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fopramodel.ecore#//FoPraManagementSystem/persons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fopramodel.ecore#//FoPraManagementSystem/auxiliaries"/>
+    </genClasses>
+    <genClasses ecoreClass="fopramodel.ecore#//Student">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//Student/matrikel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//Student/course"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//Student/fopras"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="fopramodel.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//Person/forename"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//Person/lastname"/>
+    </genClasses>
+    <genClasses ecoreClass="fopramodel.ecore#//Professor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fopramodel.ecore#//Professor/rg"/>
+    </genClasses>
+    <genClasses ecoreClass="fopramodel.ecore#//ResearchGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//ResearchGroup/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//ResearchGroup/fopras"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//ResearchGroup/professor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//ResearchGroup/associate"/>
+    </genClasses>
+    <genClasses ecoreClass="fopramodel.ecore#//Associate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//Associate/rg"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//Associate/fopras"/>
+    </genClasses>
+    <genClasses ecoreClass="fopramodel.ecore#//ExternalAdvisor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//ExternalAdvisor/information"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//ExternalAdvisor/fopras"/>
+    </genClasses>
+    <genClasses ecoreClass="fopramodel.ecore#//Auxiliary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//Auxiliary/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fopramodel.ecore#//Auxiliary/kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fopramodel.ecore#//Auxiliary/fopras"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
