@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/de.unimarburg.swt.fopra.model/src" modelPluginID="de.unimarburg.swt.fopra.model"
+    modelName="Fopramodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>fopramodel.ecore</foreignModel>
+  <genPackages prefix="Fopramodel" disposableProviderFactory="true" ecorePackage="fopramodel.ecore#/">
+    <genClasses ecoreClass="fopramodel.ecore#//FoPra"/>
+  </genPackages>
+</genmodel:GenModel>
