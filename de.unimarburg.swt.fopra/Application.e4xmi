@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="ASCII"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmi:id="_koozkIQjEeSRkaSp8djkEg" elementId="de.unimarburg.swt.fopra.application">
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_koozkIQjEeSRkaSp8djkEg" elementId="de.unimarburg.swt.fopra.application">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_FwPUcJ18EeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.ManagementWindow" label="FoPra">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_iKMzoJ18EeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.personManagementWindowPerspectiveStack">
+      <children xsi:type="advanced:Perspective" xmi:id="_9L73cJ2DEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.perspective.fopra" label="FoPra">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_tsll0J2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partsashcontainer.2" horizontal="true">
+          <children xsi:type="basic:Part" xmi:id="_vyfiYJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.fopranavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/NavigatorPlaceholder" label="FopraNavigator"/>
+          <children xsi:type="basic:PartStack" xmi:id="_0YXhUJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partstack.2" containerData="7000">
+            <children xsi:type="basic:Part" xmi:id="_1Xv6sJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.foprabasis" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Basis"/>
+            <children xsi:type="basic:Part" xmi:id="_3xeyMJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.foprabetreuer" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Betreuer"/>
+            <children xsi:type="basic:Part" xmi:id="_5UHCkJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.foprahilfsmittel" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Hilfsmittel"/>
+            <children xsi:type="basic:Part" xmi:id="_7FybkJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.foprastudierende" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Studierende"/>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_gwpXAJ2NEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.perspective.listenerstellung" label="ListenErstellung">
+        <children xsi:type="basic:PartStack" xmi:id="_koE7kJ2NEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partstack.3">
+          <children xsi:type="basic:Part" xmi:id="_lqSmgJ2NEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.anzubietendeFopras" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Anzubietende Fopras"/>
+          <children xsi:type="basic:Part" xmi:id="_nJxcQJ2NEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.abgeschlosseneFopras" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Abgeschlossene Fopras"/>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_ldIkAJ18EeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.perspective.personenverwaltung" label="Personenverwaltung">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_JKQqoJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partsashcontainer.0" horizontal="true">
+          <children xsi:type="basic:Part" xmi:id="_MEyiEJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.personnavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/NavigatorPlaceholder" label="PersonNavigator"/>
+          <children xsi:type="basic:PartStack" xmi:id="_Kfms8J2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partstack.0" containerData="7000">
+            <children xsi:type="basic:Part" xmi:id="_P-7cYJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.studierende" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Studierende"/>
+            <children xsi:type="basic:Part" xmi:id="_RC0iUJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.professoren" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Professoren"/>
+            <children xsi:type="basic:Part" xmi:id="_SMsUcJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.mitarbeiter" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Mitarbeiter"/>
+            <children xsi:type="basic:Part" xmi:id="_TRYroJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.externe" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Externe"/>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_gcVGIJ2IEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.perspective.hilfsmittelverwaltung" label="Hilfsmittelverwaltung">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_mD2IQJ2IEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partsashcontainer.1" horizontal="true">
+          <children xsi:type="basic:Part" xmi:id="_nctYoJ2IEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.hilfsmittelnavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/NavigatorPlaceholder" label="HilfsmittelNavigator"/>
+          <children xsi:type="basic:PartStack" xmi:id="_OpDcUJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partstack.1" containerData="7000">
+            <children xsi:type="basic:Part" xmi:id="_PT3T4J2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.hilfsmittel" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Hilfsmittel"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_koc5kJ2OEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.menu.0">
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_eeVOwJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handledmenuitem.fopra-verwaltung" label="FoPra-Verwaltung" type="Radio" command="_E07dkJ2OEeSxpPv0_sBHeg"/>
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_iksAIJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handledmenuitem.personenverwaltung" label="Personenverwaltung" type="Radio" command="_NMprkJ2QEeSxpPv0_sBHeg"/>
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_lXEoMJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handledmenuitem.hilfsmittelverwaltung" label="Hilfsmittelverwaltung" type="Radio" command="_PH6eYJ2QEeSxpPv0_sBHeg"/>
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_n31UwJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handledmenuitem.listenerstellung" label="Listenerstellung" type="Radio" command="_Krn5QJ2QEeSxpPv0_sBHeg"/>
+    </mainMenu>
+  </children>
+  <handlers xmi:id="_OD-nEJ2OEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.0" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToFopraPerspectiveCommand" command="_E07dkJ2OEeSxpPv0_sBHeg"/>
+  <handlers xmi:id="_RrxiQJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.1" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToListenerstellungPerspectiveCommand" command="_Krn5QJ2QEeSxpPv0_sBHeg"/>
+  <handlers xmi:id="_Tfil8J2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.2" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToPersonenverwaltungPerspectiveCommand" command="_NMprkJ2QEeSxpPv0_sBHeg"/>
+  <handlers xmi:id="_VKfE0J2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.3" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToHilfsmittelverwaltungPerspectiveCommand" command="_PH6eYJ2QEeSxpPv0_sBHeg"/>
+  <commands xmi:id="_E07dkJ2OEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtofopraperspectivecommand" commandName="switchToFoPraPerspectiveCommand"/>
+  <commands xmi:id="_Krn5QJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtolistenerstellungperspectivecommand" commandName="switchToListenErstellungPerspectiveCommand"/>
+  <commands xmi:id="_NMprkJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtopersonenverwaltungperspectivecommand" commandName="switchToPersonenverwaltungPerspectiveCommand"/>
+  <commands xmi:id="_PH6eYJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtohilfsmittelverwaltungperspectivecommand" commandName="switchToHilfsmittelverwaltungPerspectiveCommand"/>
   <addons xmi:id="_koozkYQjEeSRkaSp8djkEg" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_koozkoQjEeSRkaSp8djkEg" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_koozk4QjEeSRkaSp8djkEg" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
