@@ -9,5 +9,6 @@ Require-Bundle: javax.annotation,
  org.eclipse.jface,
  org.eclipse.e4.core.di,
  org.eclipse.e4.ui.model.workbench,
- org.eclipse.e4.ui.workbench
+ org.eclipse.e4.ui.workbench,
+ de.unimarburg.swt.fopra.model;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

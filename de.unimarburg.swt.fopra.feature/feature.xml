@@ -16,8 +16,31 @@
       [Enter License Description here.]
    </license>
 
+   <includes
+         id="org.eclipse.rcp"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="javax.annotation"/>
+      <import plugin="javax.inject"/>
+      <import plugin="org.eclipse.swt"/>
+      <import plugin="org.eclipse.jface"/>
+      <import plugin="org.eclipse.e4.core.di"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench"/>
+      <import plugin="org.eclipse.e4.ui.workbench"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+   </requires>
+
    <plugin
          id="de.unimarburg.swt.fopra"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.unimarburg.swt.fopra.model"
          download-size="0"
          install-size="0"
          version="0.0.0"
