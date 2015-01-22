@@ -4,7 +4,7 @@
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_iKMzoJ18EeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.personManagementWindowPerspectiveStack">
       <children xsi:type="advanced:Perspective" xmi:id="_9L73cJ2DEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.perspective.fopra" label="FoPra">
         <children xsi:type="basic:PartSashContainer" xmi:id="_tsll0J2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partsashcontainer.2" horizontal="true">
-          <children xsi:type="basic:Part" xmi:id="_vyfiYJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.fopranavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/NavigatorPlaceholder" label="FopraNavigator"/>
+          <children xsi:type="basic:Part" xmi:id="_vyfiYJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.fopranavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/parts.FoPraListPart" label="FopraNavigator"/>
           <children xsi:type="basic:PartStack" xmi:id="_0YXhUJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partstack.2" containerData="7000">
             <children xsi:type="basic:Part" xmi:id="_1Xv6sJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.foprabasis" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Basis"/>
             <children xsi:type="basic:Part" xmi:id="_3xeyMJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.foprabetreuer" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Betreuer"/>
@@ -21,7 +21,7 @@
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_ldIkAJ18EeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.perspective.personenverwaltung" label="Personenverwaltung">
         <children xsi:type="basic:PartSashContainer" xmi:id="_JKQqoJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partsashcontainer.0" horizontal="true">
-          <children xsi:type="basic:Part" xmi:id="_MEyiEJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.personnavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/NavigatorPlaceholder" label="PersonNavigator"/>
+          <children xsi:type="basic:Part" xmi:id="_MEyiEJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.personnavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/parts.PersonListPart" label="PersonNavigator"/>
           <children xsi:type="basic:PartStack" xmi:id="_Kfms8J2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partstack.0" containerData="7000">
             <children xsi:type="basic:Part" xmi:id="_P-7cYJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.studierende" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Studierende"/>
             <children xsi:type="basic:Part" xmi:id="_RC0iUJ2EEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.professoren" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Professoren"/>
@@ -32,7 +32,7 @@
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_gcVGIJ2IEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.perspective.hilfsmittelverwaltung" label="Hilfsmittelverwaltung">
         <children xsi:type="basic:PartSashContainer" xmi:id="_mD2IQJ2IEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partsashcontainer.1" horizontal="true">
-          <children xsi:type="basic:Part" xmi:id="_nctYoJ2IEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.hilfsmittelnavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/NavigatorPlaceholder" label="HilfsmittelNavigator"/>
+          <children xsi:type="basic:Part" xmi:id="_nctYoJ2IEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.hilfsmittelnavigator" containerData="3000" contributionURI="bundleclass://de.unimarburg.swt.fopra/parts.AuxiliaryListPart" label="HilfsmittelNavigator"/>
           <children xsi:type="basic:PartStack" xmi:id="_OpDcUJ2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.partstack.1" containerData="7000">
             <children xsi:type="basic:Part" xmi:id="_PT3T4J2JEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.part.hilfsmittel" contributionURI="bundleclass://de.unimarburg.swt.fopra/UiPlaceholder" label="Hilfsmittel"/>
           </children>

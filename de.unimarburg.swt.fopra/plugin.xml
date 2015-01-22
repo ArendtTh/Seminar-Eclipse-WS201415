@@ -12,6 +12,10 @@
                name="appName"
                value="fopra">
          </property>
+         <property
+               name="lifeCycleURI"
+               value="bundleclass://de.unimarburg.swt.fopra/fopra.LifeCycle">
+         </property>
       </product>
    </extension>
 
