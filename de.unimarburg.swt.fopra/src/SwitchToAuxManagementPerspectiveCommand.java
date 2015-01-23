@@ -18,7 +18,7 @@ import org.eclipse.e4.ui.workbench.modeling.EModelService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService.PartState;
 
-public class SwitchToHilfsmittelverwaltungPerspectiveCommand {		
+public class SwitchToAuxManagementPerspectiveCommand {		
 	
 	  @Execute
 	  public void execute(MApplication app, EPartService partService, 

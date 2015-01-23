@@ -47,13 +47,13 @@
     </mainMenu>
   </children>
   <handlers xmi:id="_OD-nEJ2OEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.0" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToFopraPerspectiveCommand" command="_E07dkJ2OEeSxpPv0_sBHeg"/>
-  <handlers xmi:id="_RrxiQJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.1" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToListenerstellungPerspectiveCommand" command="_Krn5QJ2QEeSxpPv0_sBHeg"/>
-  <handlers xmi:id="_Tfil8J2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.2" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToPersonenverwaltungPerspectiveCommand" command="_NMprkJ2QEeSxpPv0_sBHeg"/>
-  <handlers xmi:id="_VKfE0J2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.3" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToHilfsmittelverwaltungPerspectiveCommand" command="_PH6eYJ2QEeSxpPv0_sBHeg"/>
+  <handlers xmi:id="_RrxiQJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.1" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToListCreationPerspectiveCommand" command="_Krn5QJ2QEeSxpPv0_sBHeg"/>
+  <handlers xmi:id="_Tfil8J2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.2" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToPersonManagementPerspectiveCommand" command="_NMprkJ2QEeSxpPv0_sBHeg"/>
+  <handlers xmi:id="_VKfE0J2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.handler.3" contributionURI="bundleclass://de.unimarburg.swt.fopra/SwitchToAuxManagementPerspectiveCommand" command="_PH6eYJ2QEeSxpPv0_sBHeg"/>
   <commands xmi:id="_E07dkJ2OEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtofopraperspectivecommand" commandName="switchToFoPraPerspectiveCommand"/>
-  <commands xmi:id="_Krn5QJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtolistenerstellungperspectivecommand" commandName="switchToListenErstellungPerspectiveCommand"/>
-  <commands xmi:id="_NMprkJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtopersonenverwaltungperspectivecommand" commandName="switchToPersonenverwaltungPerspectiveCommand"/>
-  <commands xmi:id="_PH6eYJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtohilfsmittelverwaltungperspectivecommand" commandName="switchToHilfsmittelverwaltungPerspectiveCommand"/>
+  <commands xmi:id="_Krn5QJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtolistcreationperspectivecommand" commandName="switchToListCreationPerspectiveCommand"/>
+  <commands xmi:id="_NMprkJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtopersonmanagementgperspectivecommand" commandName="switchToPersonManagementPerspectiveCommand"/>
+  <commands xmi:id="_PH6eYJ2QEeSxpPv0_sBHeg" elementId="de.unimarburg.swt.fopra.command.switchtoauxmanagementperspectivecommand" commandName="switchToAuxManagementPerspectiveCommand"/>
   <addons xmi:id="_koozkYQjEeSRkaSp8djkEg" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_koozkoQjEeSRkaSp8djkEg" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_koozk4QjEeSRkaSp8djkEg" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

@@ -18,13 +18,13 @@ import org.eclipse.e4.ui.workbench.modeling.EModelService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService.PartState;
 
-public class SwitchToPersonenverwaltungPerspectiveCommand {		
+public class SwitchToListCreationPerspectiveCommand {		
 	
 	  @Execute
 	  public void execute(MApplication app, EPartService partService, 
 	      EModelService modelService) {
 	    MPerspective element = 
-	        (MPerspective) modelService.find("de.unimarburg.swt.fopra.perspective.personenverwaltung", app);
+	        (MPerspective) modelService.find("de.unimarburg.swt.fopra.perspective.listenerstellung", app);
 	    // now switch perspective
 	    partService.switchPerspective(element);
 	  }
