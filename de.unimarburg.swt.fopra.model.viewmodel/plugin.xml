@@ -3,6 +3,22 @@
 <plugin>
    <extension
          point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
+<file filePath="viewmodels/ResearchGroup.view"/>
+
+<file filePath="viewmodels/Auxiliary.view"/>
+
+<file filePath="viewmodels/ExternalAdvisor.view"/>
+
+<file filePath="viewmodels/Associate.view"/>
+
+<file filePath="viewmodels/Professor.view"/>
+
+<file filePath="viewmodels/Student.view"/>
+
+<file filePath="viewmodels/FoPraManagementSystem.view"/>
+
+<file filePath="viewmodels/FoPra.view"/>
+
 <file filePath="viewmodels/FoPra.view"/>
 
    </extension>

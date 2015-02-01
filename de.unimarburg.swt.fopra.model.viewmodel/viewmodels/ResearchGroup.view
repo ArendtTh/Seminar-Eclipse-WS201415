@@ -1,30 +1,55 @@
 <?xml version="1.0" encoding="ASCII"?>
-<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model" name="Arbeitsgruppe" ecorePath="/de.unimarburg.swt.fopra.model/model/fopramodel.ecore">
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model" xmlns:org.eclipse.emf.ecp.view.table.model="http://org/eclipse/emf/ecp/view/table/model" ecorePath="/de.unimarburg.swt.fopra.model/model/fopramodel.ecore">
   <rootEClass href="http://fopramodel/1.0#//ResearchGroup"/>
-  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Arbeitsgruppe">
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control name">
-      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//ResearchGroup/name"/>
-      </domainModelReference>
-    </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control professor">
-      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-        <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//ResearchGroup/professor"/>
-      </domainModelReference>
-    </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Mitarbeiter" groupType="Collapsible" collapsed="true">
-      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control associate">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control name">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//ResearchGroup/name"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control professor">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//ResearchGroup/professor"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" name="associate" detailEditing="WithDialog">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//ResearchGroup/associate"/>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//Person/forename"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//Person/lastname"/>
+      </columnDomainModelReferences>
+    </domainModelReference>
+    <detailView>
+      <rootEClass href="http://fopramodel/1.0#//Associate"/>
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control forename">
         <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-          <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//ResearchGroup/associate"/>
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//Person/forename"/>
         </domainModelReference>
       </children>
-    </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="FoPras" groupType="Collapsible" collapsed="true">
-      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control fopras">
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control lastname">
         <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-          <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//ResearchGroup/fopras"/>
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//Person/lastname"/>
         </domainModelReference>
       </children>
-    </children>
+    </detailView>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" name="fopras" readonly="true" addRemoveDisabled="true">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//ResearchGroup/fopras"/>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/title"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/status"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/start"/>
+      </columnDomainModelReferences>
+      <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/end"/>
+      </columnDomainModelReferences>
+    </domainModelReference>
   </children>
 </org.eclipse.emf.ecp.view.model:View>

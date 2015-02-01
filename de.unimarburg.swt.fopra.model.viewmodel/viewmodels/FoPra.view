@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="ASCII"?>
-<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.horizontal.model="http://org/eclipse/emf/ecp/view/horizontal/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model" xmlns:org.eclipse.emf.ecp.view.vertical.model="http://org/eclipse/emf/ecp/view/vertical/model" name="FoPra" ecorePath="/de.unimarburg.swt.fopra.model/model/fopramodel.ecore">
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.categorization.model="http://org/eclipse/emf/ecp/view/categorization/model" xmlns:org.eclipse.emf.ecp.view.compoundcontrol.model="http://org/eclipse/emf/ecp/view/compoundcontrol/model" xmlns:org.eclipse.emf.ecp.view.label.model="http://org/eclipse/emf/ecp/view/label/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model" xmlns:org.eclipse.emf.ecp.view.table.model="http://org/eclipse/emf/ecp/view/table/model" xmlns:org.eclipse.emf.ecp.view.vertical.model="http://org/eclipse/emf/ecp/view/vertical/model" name="FoPra" ecorePath="/de.unimarburg.swt.fopra.model/model/fopramodel.ecore">
   <rootEClass href="http://fopramodel/1.0#//FoPra"/>
-  <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
-    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Allgemeine Informationen">
-      <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout">
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Titel">
+  <children xsi:type="org.eclipse.emf.ecp.view.categorization.model:CategorizationElement" name="tabs" mainCategoryDepth="1">
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" name="Basis">
+      <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" name="Durchf&#xfc;hrungszeitraum" style="H1"/>
+        <children xsi:type="org.eclipse.emf.ecp.view.compoundcontrol.model:CompoundControl">
+          <controls name="Control start" readonly="true" labelAlignment="None">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/start"/>
+            </domainModelReference>
+          </controls>
+          <controls name="Control end" readonly="true" labelAlignment="None">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/end"/>
+            </domainModelReference>
+          </controls>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" name="separator" style="Separator"/>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control title">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/title"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control description">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/description"/>
           </domainModelReference>
         </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control status">
@@ -14,13 +33,11 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/status"/>
           </domainModelReference>
         </children>
-      </children>
-      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control description">
-        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/description"/>
-        </domainModelReference>
-      </children>
-      <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control maxNumberOfStudents">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/maxNumberOfStudents"/>
+          </domainModelReference>
+        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control start">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/start"/>
@@ -31,47 +48,89 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/end"/>
           </domainModelReference>
         </children>
-      </children>
-      <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Werkzeuge" groupType="Collapsible" collapsed="true">
+      </composite>
+    </categorizations>
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" name="Betreuer">
+      <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" name="title" style="H1">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/title"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" name="separator" style="Separator"/>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control rg">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//FoPra/rg"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control supervisor">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//FoPra/supervisor"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.table.model:TableControl" name="advisor" detailEditing="WithDialog">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.table.model:TableDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//FoPra/advisor"/>
+            <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//Person/forename"/>
+            </columnDomainModelReferences>
+            <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//Person/lastname"/>
+            </columnDomainModelReferences>
+            <columnDomainModelReferences xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+              <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//ExternalAdvisor/information"/>
+            </columnDomainModelReferences>
+          </domainModelReference>
+          <detailView>
+            <rootEClass href="http://fopramodel/1.0#//ExternalAdvisor"/>
+            <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control forename">
+              <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+                <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//Person/forename"/>
+              </domainModelReference>
+            </children>
+            <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control lastname">
+              <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+                <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//Person/lastname"/>
+              </domainModelReference>
+            </children>
+            <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control information">
+              <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+                <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//ExternalAdvisor/information"/>
+              </domainModelReference>
+            </children>
+          </detailView>
+        </children>
+      </composite>
+    </categorizations>
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" name="Hilfsmittel">
+      <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" name="title" style="H1">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/title"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" name="separator" style="Separator"/>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control auxiliaries">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
             <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//FoPra/auxiliaries"/>
           </domainModelReference>
         </children>
-      </children>
-    </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Studentenverwaltung" collapsed="true">
-      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Studentenanzahl">
-        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/maxNumberOfStudents"/>
-        </domainModelReference>
-      </children>
-      <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Studenten" groupType="Collapsible">
+      </composite>
+    </categorizations>
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" name="Studierende">
+      <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout">
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" name="title" style="H1">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="http://fopramodel/1.0#//FoPra/title"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.label.model:Label" name="separator" style="Separator"/>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control students">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
             <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//FoPra/students"/>
           </domainModelReference>
         </children>
-      </children>
-    </children>
-    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Betreuerverwaltung" collapsed="true">
-      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control rg">
-        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-          <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//FoPra/rg"/>
-        </domainModelReference>
-      </children>
-      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control supervisor">
-        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-          <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//FoPra/supervisor"/>
-        </domainModelReference>
-      </children>
-      <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" name="Externe Betreuer" groupType="Collapsible" collapsed="true">
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" name="Control advisor">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference">
-            <domainModelEFeature xsi:type="ecore:EReference" href="http://fopramodel/1.0#//FoPra/advisor"/>
-          </domainModelReference>
-        </children>
-      </children>
-    </children>
+      </composite>
+    </categorizations>
   </children>
 </org.eclipse.emf.ecp.view.model:View>
