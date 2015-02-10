@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<extension id="product" point="org.eclipse.core.runtime.products">
+	<product name="de.unimarburg.fx.fopra" application="org.eclipse.fx.ui.workbench.fx.application" >
+		<property name="appName" value="de.unimarburg.fx.fopra" />
+		
+		<property name="applicationXMI" value="de.unimarburg.fx.fopra.app/Application.e4xmi" />
+		
+		<property name="cssTheme" value="theme.default" />
+    <property
+          name="lifeCycleURI"
+          value="bundleclass://de.unimarburg.fx.fopra.app/fopra.LifeCycle">
+    </property>
+		
+	</product>
+	
+</extension>
+</plugin>
