@@ -8,8 +8,11 @@ import java.util.Random;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import javax.inject.Named;
 
+import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.jface.bindings.keys.KeyStroke;
 import org.eclipse.jface.bindings.keys.ParseException;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -27,7 +30,6 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.custom.SashForm;
-import org.eclipse.wb.swt.SWTResourceManager;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.layout.FormLayout;
 import org.eclipse.swt.layout.FormData;
@@ -43,6 +45,7 @@ import org.eclipse.swt.events.VerifyListener;
 
 import fopramodel.FoPra;
 import fopramodel.Status;
+import fopramodel.Student;
 import fopramodel.impl.FoPraImpl;
 
 
@@ -70,14 +73,13 @@ public class Basis {
 	
 	@PostConstruct
 	public void postConstruct(Composite parent) {
-		parent.setBackground(SWTResourceManager.getColor(SWT.COLOR_GRAY));
 		parent.setLayout(new FillLayout(SWT.VERTICAL));
 		
 		Composite CompOben = new Composite(parent, SWT.NONE);
 		CompOben.setLayout(new GridLayout(2, false));
 		
 		Label LabelLaueft = new Label(CompOben, SWT.NONE);
-		LabelLaueft.setText("LÃ¤uft vom");
+		LabelLaueft.setText("Läuft vom");
 		
 		Zeitraum = new Label(CompOben, SWT.NONE);
 		Zeitraum.setToolTipText("Gibt den Zeitraum des Praktikums an");
@@ -139,7 +141,7 @@ public class Basis {
 		
 		StatusCombo = new CCombo(CompUnten, SWT.BORDER);
 		StatusCombo.setVisibleItemCount(4);
-		StatusCombo.setToolTipText("Information Ã¼ber den Status des Projektes");
+		StatusCombo.setToolTipText("Information über den Status des Projektes");
 		StatusCombo.setEditable(false);
 		StatusCombo.setText("- bitte auswÃ¤hlen -");
 		StatusCombo.setItems(new String[] {"offen", "abgeschlossen", "in Bearbeitung", "abgebrochen"});
@@ -284,5 +286,15 @@ public class Basis {
 	public void setFocus() {
 	ButtonSaveNew.setFocus();
 	}
+	
+	@Inject
+	public void setSelection(@Optional @Named(IServiceConstants.ACTIVE_SELECTION) FoPra selection) {
+	  if (selection != null) {
+		  TextTitel.setText(selection.getTitle());
+		  BeschreibungText.setText(selection.getDescription());
+		  TextBearbeiter.setText("" + selection.getMaxNumberOfStudents());
+	  }
+	} 
+
 
 }
