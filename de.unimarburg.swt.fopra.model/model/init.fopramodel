@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fopramodel:FoPraManagementSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fopramodel="http://fopramodel/1.0">
-  <fopras title="Quality Assurance of UML State Machines" description="to do" rg="//@persons.0/@rg" supervisor="//@persons.1" auxiliaries="//@auxiliaries.0 //@auxiliaries.1 //@auxiliaries.2"/>
-  <fopras title="Quality Assurance of UML Activity Diagrams" description="to do" rg="//@persons.0/@rg" supervisor="//@persons.1" auxiliaries="//@auxiliaries.0 //@auxiliaries.1 //@auxiliaries.2"/>
-  <fopras title="Quality Assurance of OCL Expressions" description="to do" status="inprocess" start="2014-10-01T00:00:00.000+0200" students="//@persons.2" rg="//@persons.0/@rg" supervisor="//@persons.1" auxiliaries="//@auxiliaries.0 //@auxiliaries.1 //@auxiliaries.2"/>
+  <fopras title="Quality Assurance of UML State Machines" description="Beschreibung von Quality Assurance of UML State Machines" rg="//@persons.0/@rg" supervisor="//@persons.1" auxiliaries="//@auxiliaries.0 //@auxiliaries.1 //@auxiliaries.2" maxNumberOfStudents="3"/>
+  <fopras title="Quality Assurance of UML Activity Diagrams" description="Beschreibung von Quality Assurance of UML Activity Diagrams" rg="//@persons.0/@rg" supervisor="//@persons.1" auxiliaries="//@auxiliaries.0 //@auxiliaries.1 //@auxiliaries.2" maxNumberOfStudents="2"/>
+  <fopras title="Quality Assurance of OCL Expressions" description="Beschreibung von Quality Assurance of OCL Expressions" status="inprocess" start="2014-10-01T00:00:00.000+0200" students="//@persons.2" rg="//@persons.0/@rg" supervisor="//@persons.1" auxiliaries="//@auxiliaries.0 //@auxiliaries.1 //@auxiliaries.2" maxNumberOfStudents="4"/>
   <persons xsi:type="fopramodel:Professor" forename="Gabriele" lastname="Taentzer">
     <rg name="AG Softwaretechnik" fopras="//@fopras.0 //@fopras.1 //@fopras.2" associate="//@persons.1"/>
   </persons>
