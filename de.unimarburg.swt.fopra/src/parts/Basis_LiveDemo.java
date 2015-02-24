@@ -19,6 +19,8 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.fieldassist.ContentProposalAdapter;
 import org.eclipse.jface.fieldassist.SimpleContentProposalProvider;
 import org.eclipse.jface.fieldassist.TextContentAdapter;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
@@ -49,7 +51,7 @@ import fopramodel.Student;
 import fopramodel.impl.FoPraImpl;
 
 
-public class Basis {
+public class Basis_LiveDemo {
 	private Text TextTitel;
 	private Text BeschreibungText;
 	private Text TextBearbeiter;
@@ -67,7 +69,7 @@ public class Basis {
 	
 	
 	@Inject
-	public Basis() {
+	public Basis_LiveDemo() {
 		
 	}
 	
@@ -289,14 +291,9 @@ public class Basis {
 	
 	
 	// auf Aenderung der Selection reagieren
-	@Inject
-	public void setSelection(@Optional @Named(IServiceConstants.ACTIVE_SELECTION) FoPra selection) {
-	  if (selection != null) {
-		  TextTitel.setText(selection.getTitle());
-		  BeschreibungText.setText(selection.getDescription());
-		  TextBearbeiter.setText("" + selection.getMaxNumberOfStudents());
-	  }
-	} 
+
+	
+	
 
 
 }
